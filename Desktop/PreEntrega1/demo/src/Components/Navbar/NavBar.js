@@ -2,9 +2,10 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { FaShoppingCart } from 'react-icons/fa';
+import './NavBar.css';
 
 function NavBar() {
-    const notificacionCont = 2;
+    const notificationCount = 0;
     return (
         <div>
             <Navbar bg="dark" data-bs-theme="dark">
@@ -16,10 +17,8 @@ function NavBar() {
                         <Nav.Link href="#ventas">Ventas</Nav.Link>
                     </Nav>
                     <div className="cart-icon">
-                        <FaShoppingCart />
-                        {notificationCount > 0 && (
-                            <span className="notification-badge">{notificationCount}</span>
-                        )}
+                        <FaShoppingCart className='cart'/>
+                        <span className="notification-badge">{notificationCount}</span>
                     </div>
                 </Container>
             </Navbar>
