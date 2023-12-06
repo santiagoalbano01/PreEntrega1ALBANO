@@ -1,0 +1,9 @@
+.item-row {
+    display: flex;
+}
+
+.item-image{
+    width: 200px; /* Ancho de 30px */
+    height: 190px; /* Alto de 43px */
+    margin: 5px; /* Margen entre imágenes */
+}

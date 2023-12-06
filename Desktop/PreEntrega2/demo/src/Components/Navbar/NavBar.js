@@ -13,9 +13,9 @@ function NavBar() {
           <Navbar.Brand href="/"> <Logo/> </Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="/">MUNDO PHONE</Nav.Link>
-            <Nav.Link href="/samsung">Samsung</Nav.Link>
-            <Nav.Link href="/motorola">Motorola</Nav.Link>
-            <Nav.Link href="/iphone">Iphone</Nav.Link>
+            <Nav.Link href="/category/Samsung">Samsung</Nav.Link>
+            <Nav.Link href="/category/Motorola">Motorola</Nav.Link>
+            <Nav.Link href="/category/iPhone">Iphone</Nav.Link>
            
           </Nav>
           <Nav.Link href="/cart">   <CartWidget/>   </Nav.Link>
