@@ -3,6 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import CartWidget from '../CartWidget/CartWidget'
 import Logo from './Logo';
+import { Link } from 'react-router-dom';
 import './NavBar.css'
 
 function NavBar() {
@@ -10,15 +11,15 @@ function NavBar() {
     <>
       <Navbar bg="dark" data-bs-theme="dark">
         <Container>
-          <Navbar.Brand href="/"> <Logo/> </Navbar.Brand>
+          <Navbar.Brand to="/"> <Logo/> </Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="/">MUNDO PHONE</Nav.Link>
-            <Nav.Link href="/category/Samsung">Samsung</Nav.Link>
-            <Nav.Link href="/category/Motorola">Motorola</Nav.Link>
-            <Nav.Link href="/category/iPhone">Iphone</Nav.Link>
+            <Link to="/" className='nav-link'>MUNDO PHONE</Link>
+            <Link to="/category/Samsung" className='nav-link'>Samsung</Link>
+            <Link to="/category/Motorola" className='nav-link'>Motorola</Link>
+            <Link to="/category/iPhone" className='nav-link'>Iphone</Link>
            
           </Nav>
-          <Nav.Link href="/cart">   <CartWidget/>   </Nav.Link>
+          <Link to="/cart">   <CartWidget/>   </Link>
         </Container>
       </Navbar>
 

@@ -4,3 +4,13 @@
     margin-left: 10px;
     margin-bottom: 10px;
 }
+
+.nav-link {
+    color: white;
+    margin-right: 4px;
+  }
+  
+  .nav-link:hover {
+    color: grey;
+  }
+  
