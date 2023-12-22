@@ -1,16 +1,31 @@
-import React from 'react'
+import React, {useState} from 'react';
+import ItemCount from '../ItemCount/ItemCount';
+import { Link } from 'react-router-dom';
+import { useCartContext } from '../Context/CartContext';
+
 
 const ItemDetail = ({item}) => {
+
+  const[goToCart, setGoToCart] = useState(false);
+  const {addProduct} = useCartContext()
+  const onAdd = (quantity) =>{
+   setGoToCart(true);
+   addProduct(item, quantity);
+  }
+
   return (
-    <div className='row'>
-      <div className='col-md-4 iifset-md-4'>
-        <img src={item.imagen} className='card-img-top' alt={item.nombre} />
-        <h3>{item.modelo}</h3>
-        <p>{item.descripcion}</p>
-        <p>$ {item.precio}</p>
-      </div>
-      
-    </div>
+    <div>
+     <div className='col-md-4 offset-md-4'>
+        <img src={item.image} className='img-fluid'alt={item.title}/>
+        <h2>{item.title}</h2>
+        <p>{item.description}</p>
+        <p> $ {item.price}</p>
+        <p> Cantidad: {item.stock}</p>
+     </div>
+     <div>
+      {goToCart ? <Link to='/cart'>Terminar compra</Link> :<ItemCount stock={10} initial={1} onAdd={onAdd} />}
+     </div>
+     </div>
   )
 }
 
