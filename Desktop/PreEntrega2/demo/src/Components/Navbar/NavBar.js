@@ -1,30 +1,56 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import CartWidget from '../CartWidget/CartWidget'
+import React, { useState } from 'react';
+import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import CartWidget from '../CartWidget/CartWidget';
 import Logo from './Logo';
 import { Link } from 'react-router-dom';
-import './NavBar.css'
+import './NavBar.css';
 
 function NavBar() {
+  const [expanded, setExpanded] = useState(false);
+
+  const handleToggle = () => {
+    setExpanded(!expanded);
+  };
+
   return (
     <>
-      <Navbar bg="dark" data-bs-theme="dark">
+      <Navbar bg="white" expand="lg" variant="black">
         <Container>
-          <Navbar.Brand to="/"> <Logo/> </Navbar.Brand>
-          <Nav className="me-auto">
-            <Link to="/" className='nav-link'>MUNDO PHONE</Link>
-            <Link to="/category/Samsung" className='nav-link'>Samsung</Link>
-            <Link to="/category/Motorola" className='nav-link'>Motorola</Link>
-            <Link to="/category/iPhone" className='nav-link'>Iphone</Link>
-           
-          </Nav>
-          <Link to="/cart">   <CartWidget/>   </Link>
+          <Navbar.Brand as={Link} to="/">
+            <Logo />
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={handleToggle} />
+          <Navbar.Collapse id="responsive-navbar-nav" className={`${expanded ? 'show' : ''}`}>
+            <Nav className="me-auto">
+              <Link to="/" className="nav-link">
+                MUNDO PHONE
+              </Link>
+              <NavDropdown title="CATEGORÍAS" id="basic-nav-dropdown">
+                <NavDropdown.Item as={Link} to="/category/Samsung">
+                  Samsung
+                </NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/category/Motorola">
+                  Motorola
+                </NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/category/iPhone">
+                  iPhone
+                </NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/category/Xiaomi">
+                  Xiaomi
+                </NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/category/Nokia">
+                  Nokia
+                </NavDropdown.Item>
+              </NavDropdown>
+            </Nav>
+            <Link to="/cart" className="cart">
+              <CartWidget />
+            </Link>
+          </Navbar.Collapse>
         </Container>
       </Navbar>
-
-      </>
-      );
+    </>
+  );
 }
 
 export default NavBar;

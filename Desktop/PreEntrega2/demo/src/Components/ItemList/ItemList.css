@@ -1,0 +1,14 @@
+
+.col-md-3 a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+.col-md-3:hover a{
+    color: #ffd700;
+}
+
+.row img{
+    width: 170px;
+}
