@@ -39,7 +39,7 @@ En este proyecto se han utilizado algunas dependencias adicionales fuera de las 
 
 Para ejecutar este proyecto localmente, sigue estos pasos:
 
-1. Clona el repositorio a tu máquina local: `git clone 
+1. Clona el repositorio a tu máquina local: `git clone https://github.com/santiagoalbano01/ProyectoFinalAgustinAlbano`
 2. Instala las dependencias necesarias usando npm: `npm install`
 3. Configura Firebase con tus credenciales y configura la base de datos según sea necesario.
 4. Inicia la aplicación: `npm start`
