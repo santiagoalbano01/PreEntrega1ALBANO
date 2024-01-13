@@ -43,11 +43,13 @@ function NavBar() {
                 </NavDropdown.Item>
               </NavDropdown>
             </Nav>
-            <Link to="/cart" className="cart">
-              <CartWidget />
-            </Link>
           </Navbar.Collapse>
         </Container>
+        <div className="floating-cart-button">
+          <Link to="/cart">
+            <CartWidget />
+          </Link>
+        </div>
       </Navbar>
     </>
   );

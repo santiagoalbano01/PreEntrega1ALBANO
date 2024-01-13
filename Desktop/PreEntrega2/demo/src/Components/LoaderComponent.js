@@ -6,11 +6,11 @@ const LoaderComponent = () => {
   useEffect(()=>{
    const timer = setTimeout(()=>{
     setLoading(false);
-   }, 5000)
+   }, 2000)
    return () => clearTimeout(timer);
   }, [])
 
-  return loading ? <div> Cargando todos los productos... </div> : null;
+  return loading ? <div> Renderizando Productos.... </div> : null;
 }
 
 export default LoaderComponent
