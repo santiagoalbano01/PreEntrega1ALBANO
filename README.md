@@ -27,6 +27,13 @@ En este proyecto se han utilizado algunas dependencias adicionales fuera de las 
 - **React Bootstrap:** Se utilizó para la creación de componentes y la interfaz de usuario, aprovechando los estilos predefinidos y componentes de Bootstrap para una apariencia más atractiva y una interfaz responsiva.
 - **React Icons:** Agrega íconos a la aplicación, mejorando la usabilidad y la estética.
 
+## Requisitos
+
+Asegúrate de tener las siguientes herramientas instaladas antes de ejecutar el proyecto:
+
+- **Node.js:** >=12.0.0:** Node.js permite ejecutar aplicaciones del lado del servidor y gestionar dependencias con npm. Este proyecto lo utiliza para instalar y gestionar dependencias.
+- **Create React App (CRA):** Se recomienda tener instalado Create React App para facilitar la inicialización y configuración del proyecto.
+
 ## Estructura del Proyecto
 
 - **/src:** Contiene el código fuente del proyecto.
