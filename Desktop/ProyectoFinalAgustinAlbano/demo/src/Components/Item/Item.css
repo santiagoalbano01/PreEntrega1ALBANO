@@ -1,0 +1,8 @@
+.item-row {
+    display: flex;
+}
+
+.item-image{
+    max-width: 100%;
+    margin: 5px; 
+}

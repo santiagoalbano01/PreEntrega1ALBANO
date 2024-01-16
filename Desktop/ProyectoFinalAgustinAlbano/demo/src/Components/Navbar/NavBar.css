@@ -1,0 +1,61 @@
+.cart,
+.notification-badge {
+  color: black;
+  font-size: 15px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+/* Fondo y estilos generales del Navbar */
+.navbar {
+  color: black; /* Color del texto */
+  padding: 15px 0; /* Espaciado interno */
+  font-family: 'Antonio', sans-serif;
+}
+
+/* Color del enlace en el Navbar */
+.navbar .nav-link {
+  color: black;
+  margin-right: 20px;
+  font-size: 26px;
+  font-style: 'Antonio'
+}
+
+/* Cambiar el color del enlace cuando se hace hover */
+.navbar .nav-link:hover {
+  color: #ffd700; /* Cambia este color por el que prefieras */
+}
+
+/* Estilos para el título del Navbar */
+.navbar-brand {
+  color: #ffd700; /* Color del título */
+  font-size: 24px; /* Tamaño de la fuente */
+  font-weight: bold; /* Peso de la fuente */
+}
+
+/* Estilos para el menú desplegable */
+.navbar .dropdown-menu {
+  background-color: #444; /* Color de fondo */
+}
+
+/* Estilos para los items del menú desplegable */
+.navbar .dropdown-item {
+  color: white; /* Color del texto */
+}
+
+/* Cambiar el color del item del menú desplegable cuando se hace hover */
+.navbar .dropdown-item:hover {
+  background-color: #ffd700;
+}
+
+.floating-cart-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
