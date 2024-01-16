@@ -24,7 +24,7 @@ export const CheckOut = () => {
     }
 
     if (email !== emailConfirmacion) {
-      setError('Los email no coinciden');
+      setError('Los emails no coinciden');
       return;
     }
 
@@ -123,7 +123,7 @@ export const CheckOut = () => {
         </div>
 
 
-        {error && <p>{error}</p>}
+        {error && <p className="error">{error}</p>}
         {ordenId && (
           <p className="success-message"> ¡Gracias por tu compra ! Tu numero de seguimiento es: <br /> {''} {ordenId} {''} <br /></p>
         )}
